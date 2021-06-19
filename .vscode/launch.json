@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run jgp1-employees",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/jgp1-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsjgpemployees/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/employees",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/jgp1/employees\"}"
+      },
+      "envFile": "${workspaceFolder}/employees/.env2",
+      "preLaunchTask": "Build jgp1"
+    }
+  ]
+}
