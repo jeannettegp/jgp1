@@ -4,7 +4,7 @@
         <Button id="btnShowCity" text="{i18n>ShowCity}" visible="{jsonModelConfig>/visibleBtnShowCity}" press="onShowCity" />
         <Button id="btnHideCity" text="{i18n>HideCity}" visible="{jsonModelConfig>/visibleBtnHideCity}" press="onHideCity" />
 
-        <Table id="tablEmployee" items="{jsonEmployees>/Employees}">
+        <Table id="tablEmployee" items="{jsonEmployees>/}">
             <columns>
                 <Column visible="{jsonModelConfig>/visibleID}">
                     <header>
@@ -33,7 +33,7 @@
                 </Column>
             </columns>
             <items>
-                <ColumnListItem>
+                <ColumnListItem type="Navigation" press="showEmployee">
                     <cells>
                         <Label text="{jsonEmployees>EmployeeID}"/>
                         <Label text="{jsonEmployees>LastName}, {jsonEmployees>FirstName}"/>
